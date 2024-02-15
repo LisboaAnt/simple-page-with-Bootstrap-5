@@ -1,0 +1,23 @@
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+  }
+
+@media(min-width:768px){
+    .news-input{
+        width: 50%;
+    }
+}
+
+.bg-custom-purple {
+    background-color: rgba(0, 8, 255, 0.107);
+}
+
+
+
+/* Torna a barra de navegação transparente ao rolar para baixo */
+.navbar.transparent-on-scroll {
+    background-color: rgba(28, 32, 36, 0.986)!important;/** "!important" - faz ignorar o bootstrap */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}

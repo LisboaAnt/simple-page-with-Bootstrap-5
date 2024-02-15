@@ -9,29 +9,49 @@
   
   <!--Meu css-->
   <link rel="stylesheet" href="./style.css">
+  
+  <!--CSS icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 
   <title>Bootstrap 5 - page</title>
-
 </head>
 <body>
 
-  <!--NAVBAR BOOTSTRAP-->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
-    <div class="container">
-      <a href="#" class="navbar-brand"> Frontend Bootcamp</a>
+  <!-- *NAVBAR BOOTSTRAP-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top" id="navbar">
+    <!-- 
+        navbar - Cria uma barra de navegação responsiva 
+        navbar-expand-lg - Define o ponto de quebra para a navegação responsiva em telas menores 
+        bg-dark - Define o fundo escuro para a barra de navegação 
+        navbar-dark - Define o esquema de cores para texto claro na barra de navegação 
+        py-3 - Adiciona preenchimento (espaçamento interno) de 3 unidades ao eixo y (vertical) 
+        fixed-top - Fixa ela no topo da pagina
+      -->
 
-      <button class="navbar-toggler" type="button" 
-      data-bs-toggle="collapse" data-bs-target="#navmenu">
+    <div class="container">
+      
+      <a href="#" class="navbar-brand"> Frontend Bootcamp</a>
+      <!--  navbar-brand - Cria um link para a "marca" ou logotipo na barra de navegação -->
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <!--  navbar-toggler - Adiciona um botão de alternância para a navegação responsiva -->
+        <!--  data-bs-toggle e {data-bs-target} - Controlam o colapso da navegação responsiva -->
         <span class="navbar-toggler-icon"></span>
       </button>
 
-
       <div class="collapse navbar-collapse" id="navmenu">
+        <!-- Classe Bootstrap: collapse - Define a área que será colapsada na navegação responsiva -->
+        <!-- Atributo Bootstrap: id - Identifica a área que será colapsada com o botão de alternância -->
 
         <ul class="navbar-nav ms-auto">
+          <!-- Tag Bootstrap: navbar-nav - Cria uma lista não ordenada dentro da barra de navegação -->
+          <!-- Classe Bootstrap: ms-auto - Alinha os itens à direita da barra de navegação (ms = margin-start) -->
 
           <li class="nav-item">
             <a href="#learn" class="nav-link"> O que você aprenderá</a>
+            <!-- Tag Bootstrap: nav-item - Define um item da barra de navegação -->
+            <!-- Tag Bootstrap: nav-link - Cria um link dentro do item da barra de navegação -->
           </li>
 
           <li class="nav-item">
@@ -47,48 +67,299 @@
     </div>
   </nav>
   
-  <!-- Showcase-->
+  <!-- *Showcase-->
   <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-    
+    <!-- Classe Bootstrap: bg-dark - Define o fundo escuro para a seção -->
+    <!-- Classe Bootstrap: text-light - Define o texto como claro para melhor contraste com o fundo escuro -->
+    <!-- Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
+    <!-- Classe Bootstrap: p-lg-0 - Remove o preenchimento (espaçamento interno) em telas grandes -->
+    <!-- Classe Bootstrap: pt-lg-5 - Adiciona preenchimento (espaçamento interno) no topo em telas grandes -->
+    <!-- Classe Bootstrap: text-center - Centraliza o texto horizontalmente -->
+    <!-- Classe Bootstrap: text-sm-start - Alinha o texto à esquerda em telas pequenas -->
+
     <div class="container">
-      
+      <!-- Tag Bootstrap: container - Define um contêiner para centralizar o conteúdo e fornecer margens laterais automáticas -->
+
       <div class="d-sm-flex align-items-center justify-content-between">
-        
+        <!-- Classe Bootstrap: d-sm-flex - Torna o contêiner flexível em telas pequenas e maiores -->
+        <!-- Classe Bootstrap: align-items-center - Centraliza os itens verticalmente dentro do contêiner flexível -->
+        <!-- Classe Bootstrap: justify-content-between - Distribui os itens igualmente ao longo do eixo principal com espaço entre eles -->
+
         <div> 
           <h1>Se torne um <span class="text-warning">Web Developer</span></h1>
+          <!-- Tag Bootstrap: text-warning - Define a cor do texto como amarelo (warning) -->
+
           <p class="lead">
             Nós nos concentramos em ensinar aos nossos alunos os fundamentos das melhores e mais recentes tecnologias para prepará-los para sua primeira função de desenvolvedor
           </p>
 
           <button class="btn btn-primary btn-lg">Iniciar a inscrição</button>
+          <!-- Tag Bootstrap: btn - Define um botão -->
+          <!-- Classe Bootstrap: btn-primary - Define o estilo primário para o botão -->
+          <!-- Classe Bootstrap: btn-lg - Define o tamanho grande para o botão -->
         </div>
         
         <img 
         class="img-fluid w-50 d-none d-sm-block" 
         src="./img/showcase.svg" 
         alt="">
+        <!-- {aasa}Adadawd Classe Bootstrap: img-fluid - Faz com que a imagem responda ao tamanho do contêiner pai -->
+        <!-- Classe Bootstrap: w-50 - Define a largura da imagem como 50% do contêiner pai -->
+        <!-- Classe Bootstrap: d-none d-sm-block - Esconde a imagem em telas pequenas e exibe em telas maiores (sm = small) -->
       
       </div>
     </div>
   </section>
 
 
-  <!-- News Latter-->
+  <!-- *News Letter-->
   <section class="bg-primary text-light p-5">
-    <div class="contiarner">
+    <div class="container">
+      <!-- Classe Bootstrap: bg-primary - Define o fundo primário para a seção -->
+      <!-- Classe Bootstrap: text-light - Define o texto como claro para melhor contraste com o fundo primário -->
+      <!-- Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
+
       <div class="d-md-flex justify-content-between align-items-center">
+        <!-- Classe Bootstrap: d-md-flex - Torna o contêiner flexível em telas médias e maiores -->
+        <!-- Classe Bootstrap: justify-content-between - Distribui os itens igualmente ao longo do eixo principal com espaço entre eles -->
+        <!-- Classe Bootstrap: align-items-center - Centraliza os itens verticalmente dentro do contêiner flexível -->
+
         <h3 class="mb-3 mb-md-0">Sing Up For Our NewsLatter</h3>
+        <!-- Tag Bootstrap: mb-3 e mb-md-0 - Adiciona margem inferior de 3 unidades em telas pequenas e remove a margem inferior em telas médias e maiores -->
+
+        <div class="input-group news-input">
+          <!-- Classe Bootstrap: input-group - Agrupa elementos de entrada de formulário para uma apresentação mais consistente -->
+          
+          <input type="text" 
+            class="form-control" 
+            placeholder="Email">
+          <!-- Tag Bootstrap: form-control - Estiliza as entradas de formulário para ter uma aparência consistente -->
+          
+          <button 
+            class="btn btn-dark btn-lg" 
+            type="button" 
+            id="button-addon2">Button</button>
+          <!-- Tag Bootstrap: btn - Define um botão -->
+          <!-- Classe Bootstrap: btn-dark - Define o estilo escuro para o botão -->
+          <!-- Classe Bootstrap: btn-lg - Define o tamanho grande para o botão -->
+        </div>
 
       </div>
 
     </div>
   </section>
 
+  <!-- *Caixas-->
+  <section class="p-5">
+    <!-- ^^Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
+
+    <div class="container">
+      <!-- Tag Bootstrap: container - Define um contêiner para centralizar o conteúdo e fornecer margens laterais automáticas -->
+
+      <div class="row text-center">
+        <!-- Classe Bootstrap: row - Cria uma linha para conter as colunas -->
+        <!-- Classe Bootstrap: text-center - Centraliza o texto horizontalmente dentro da linha -->
+
+        <div class="col-md">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3 class="card-title mb-3">Virtual</h3>
+              <p class="card-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Iure, quas quidem possimus dolorum esse eligendi?
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md">
+          <div class="card bg-secondary text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-person-square"></i>
+              </div>
+              <h3 class="card-title mb-3">Hybrid</h3>
+              <p class="card-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Iure, quas quidem possimus dolorum esse eligendi?
+              </p>
+              <a href="#" class="btn btn-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="card-title mb-3">In Person</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Classe Bootstrap: col - Define uma coluna no sistema de grade Bootstrap -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Learn Sections-->
+  <section id="learn" class="p-5">
+    <div class="container bg-custom-purple rounded">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md">
+          <img src="./img/fundamentals.svg" class="img-fluid" alt="">
+        </div>
+        <div class="col-md p-5">
+          <h2>Learn The Fundamentals</h2>
+          <p class="lead">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Similique deleniti possimus magnam corporis ratione facere!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+            reiciendis eius autem eveniet mollitia, at asperiores suscipit
+            quae similique laboriosam iste minus placeat odit velit quos,
+            nulla architecto amet voluptates?
+          </p>
+          <a href="#" class="btn btn-light mt-3">
+            <i class="bi bi-chevron-right"></i> Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Learn Sections-->
+    <section id="learn" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          
+          <div class="col-md p-5">
+            <h2>Learn React</h2>
+            <p class="lead">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique deleniti possimus magnam corporis ratione facere!
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+
+          <div class="col-md">
+            <img src="./img/react.svg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
 
-  <!--Js Bootstrap-->
+        <!--Item 1-->
+        <div class="accordion-item">
+          
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one" >
+              <h6>que vou aprender?</h6>
+            </button>
+          </h2>
+
+          <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">
+            <div class="accordion-body">Você aprenderá os fundamentos essenciais de<strong> HTML, CSS e JavaScript</strong>, incluindo a criação de estruturas de página web com HTML, o design e a estilização de páginas usando CSS e a adição de interatividade e dinamismo com JavaScript. Além disso, você explorará tópicos avançados em cada uma dessas linguagens, permitindo que você construa<code> websites dinâmicos e interativos.</code>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Item 2-->
+        <div class="accordion-item">
+          
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two" >
+            <h6>O que preciso para fazer o curso?</h6>
+            </button>
+          </h2>
+
+          <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#questions">
+            <div class="accordion-body">Para fazer o curso, é recomendável que você tenha um entendimento básico de<code> informática e navegação na web.</code> Além disso, é útil ter conhecimento prévio de HTML, CSS e JavaScript, mas não é obrigatório, pois o curso abordará os conceitos desde o básico.
+            </div>
+          </div>
+
+        </div>
+
+        <!--Item 3-->
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three" >
+              <h6>Estarei pronto para o mercado de trabalho?</h6>
+            </button>
+          </h2>
+
+          <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#questions">
+            <div class="accordion-body">Ao concluir o curso, você estará bem preparado para iniciar sua jornada no mundo do desenvolvimento web. Você terá adquirido habilidades sólidas em HTML, CSS e JavaScript, que são fundamentais para a construção de websites modernos e responsivos. No entanto, estar totalmente pronto para o mercado de trabalho pode exigir prática adicional e experiência prática na criação de projetos reais. Este curso fornecerá uma base sólida para você <code>começar sua carreira como desenvolvedor web</code>.
+
+            </div>
+          </div>
+
+        </div>
+
+        <!--Item 4-->
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-four" >
+              <h6>Como participo?</h6>
+            </button>
+          </h2>
+
+          <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#questions">
+            <div class="accordion-body">Para se inscrever no curso, acesse o site oficial da instituição, preencha o formulário de inscrição com seus dados pessoais e siga as instruções para pagamento, se necessário. Após o processo de inscrição, você receberá uma confirmação por e-mail ou será redirecionado para uma página de confirmação. Se precisar de ajuda, entre em contato com o suporte técnico ou administrativo da instituição.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="instructors" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white"> Our Instructors</h2>
+        <p class="lead text-center text-white mb-5">
+          Our instructore.ss
+        </p>
+      </div>
+    </section>
+
+
+  <!-- *Js Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script src="./index.js"></script>
+
 </body>
 </html>
+

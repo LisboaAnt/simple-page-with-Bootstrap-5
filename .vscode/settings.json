@@ -1,0 +1,23 @@
+{"editor.tokenColorCustomizations": {
+    "textMateRules": [
+        {
+            "scope": [
+                "comment.block.html punctuation.definition.comment",
+                "comment.block.html text"
+            ],
+            "settings": {
+                "foreground": "#ae650049" // Cor das tags de comentário <!-- -->
+            }
+        },
+        {
+            "scope": [
+                "comment",
+                "comment.block.documentation"
+            ],
+            "settings": {
+                "foreground": "#676767" // Cor branca em hexadecimal
+            }
+        }
+    ]
+}
+}
