@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Bootstrap CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-  <!--Meu css-->
-  <link rel="stylesheet" href="./style.css">
-  
-  <!--CSS icons-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!--! Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+  <!--! Meu css-->
+    <link rel="stylesheet" href="./style.css">
+    
+  <!--! CSS icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!--! Adicione o Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
 
   <title>Bootstrap 5 - page</title>
@@ -19,248 +22,244 @@
 <body>
 
   <!-- *NAVBAR BOOTSTRAP-->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top" id="navbar">
-    <!-- 
-        navbar - Cria uma barra de navegação responsiva 
-        navbar-expand-lg - Define o ponto de quebra para a navegação responsiva em telas menores 
-        bg-dark - Define o fundo escuro para a barra de navegação 
-        navbar-dark - Define o esquema de cores para texto claro na barra de navegação 
-        py-3 - Adiciona preenchimento (espaçamento interno) de 3 unidades ao eixo y (vertical) 
-        fixed-top - Fixa ela no topo da pagina
-      -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top" id="navbar">
+      <!-- 
+          navbar - Cria uma barra de navegação responsiva 
+          navbar-expand-lg - Define o ponto de quebra para a navegação responsiva em telas menores 
+          bg-dark - Define o fundo escuro para a barra de navegação 
+          navbar-dark - Define o esquema de cores para texto claro na barra de navegação 
+          py-3 - Adiciona preenchimento (espaçamento interno) de 3 unidades ao eixo y (vertical) 
+          fixed-top - Fixa ela no topo da pagina
+        -->
 
-    <div class="container">
-      
-      <a href="#" class="navbar-brand"> Frontend Bootcamp</a>
-      <!--  navbar-brand - Cria um link para a "marca" ou logotipo na barra de navegação -->
+      <div class="container">
+        
+        <a href="#" class="navbar-brand"> Frontend Bootcamp</a>
+        <!--  navbar-brand - Cria um link para a "marca" ou logotipo na barra de navegação -->
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <!--  navbar-toggler - Adiciona um botão de alternância para a navegação responsiva -->
-        <!--  data-bs-toggle e {data-bs-target} - Controlam o colapso da navegação responsiva -->
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <!--  navbar-toggler - Adiciona um botão de alternância para a navegação responsiva -->
+          <!--  data-bs-toggle e {data-bs-target} - Controlam o colapso da navegação responsiva -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navmenu">
-        <!-- Classe Bootstrap: collapse - Define a área que será colapsada na navegação responsiva -->
-        <!-- Atributo Bootstrap: id - Identifica a área que será colapsada com o botão de alternância -->
+        <div class="collapse navbar-collapse" id="navmenu">
+          <!-- Classe Bootstrap: collapse - Define a área que será colapsada na navegação responsiva -->
+          <!-- Atributo Bootstrap: id - Identifica a área que será colapsada com o botão de alternância -->
 
-        <ul class="navbar-nav ms-auto">
-          <!-- Tag Bootstrap: navbar-nav - Cria uma lista não ordenada dentro da barra de navegação -->
-          <!-- Classe Bootstrap: ms-auto - Alinha os itens à direita da barra de navegação (ms = margin-start) -->
+          <ul class="navbar-nav ms-auto">
+            <!-- Tag Bootstrap: navbar-nav - Cria uma lista não ordenada dentro da barra de navegação -->
+            <!-- Classe Bootstrap: ms-auto - Alinha os itens à direita da barra de navegação (ms = margin-start) -->
 
-          <li class="nav-item">
-            <a href="#learn" class="nav-link"> O que você aprenderá</a>
-            <!-- Tag Bootstrap: nav-item - Define um item da barra de navegação -->
-            <!-- Tag Bootstrap: nav-link - Cria um link dentro do item da barra de navegação -->
-          </li>
+            <li class="nav-item">
+              <a href="#learn" class="nav-link"> O que você aprenderá</a>
+              <!-- Tag Bootstrap: nav-item - Define um item da barra de navegação -->
+              <!-- Tag Bootstrap: nav-link - Cria um link dentro do item da barra de navegação -->
+            </li>
 
-          <li class="nav-item">
-            <a href="#questions" class="nav-link">Perguntas</a>
-          </li>
+            <li class="nav-item">
+              <a href="#questions" class="nav-link">Perguntas</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#instructors" class="nav-link">Instrutores</a>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link">Instrutores</a>
+            </li>
+          </ul>
 
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   
   <!-- *Showcase-->
-  <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-    <!-- Classe Bootstrap: bg-dark - Define o fundo escuro para a seção -->
-    <!-- Classe Bootstrap: text-light - Define o texto como claro para melhor contraste com o fundo escuro -->
-    <!-- Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
-    <!-- Classe Bootstrap: p-lg-0 - Remove o preenchimento (espaçamento interno) em telas grandes -->
-    <!-- Classe Bootstrap: pt-lg-5 - Adiciona preenchimento (espaçamento interno) no topo em telas grandes -->
-    <!-- Classe Bootstrap: text-center - Centraliza o texto horizontalmente -->
-    <!-- Classe Bootstrap: text-sm-start - Alinha o texto à esquerda em telas pequenas -->
-
-    <div class="container">
-      <!-- Tag Bootstrap: container - Define um contêiner para centralizar o conteúdo e fornecer margens laterais automáticas -->
-
-      <div class="d-sm-flex align-items-center justify-content-between">
-        <!-- Classe Bootstrap: d-sm-flex - Torna o contêiner flexível em telas pequenas e maiores -->
-        <!-- Classe Bootstrap: align-items-center - Centraliza os itens verticalmente dentro do contêiner flexível -->
-        <!-- Classe Bootstrap: justify-content-between - Distribui os itens igualmente ao longo do eixo principal com espaço entre eles -->
-
-        <div> 
-          <h1>Se torne um <span class="text-warning">Web Developer</span></h1>
-          <!-- Tag Bootstrap: text-warning - Define a cor do texto como amarelo (warning) -->
-
-          <p class="lead">
-            Nós nos concentramos em ensinar aos nossos alunos os fundamentos das melhores e mais recentes tecnologias para prepará-los para sua primeira função de desenvolvedor
-          </p>
-
-          <button class="btn btn-primary btn-lg">Iniciar a inscrição</button>
-          <!-- Tag Bootstrap: btn - Define um botão -->
-          <!-- Classe Bootstrap: btn-primary - Define o estilo primário para o botão -->
-          <!-- Classe Bootstrap: btn-lg - Define o tamanho grande para o botão -->
-        </div>
-        
-        <img 
-        class="img-fluid w-50 d-none d-sm-block" 
-        src="./img/showcase.svg" 
-        alt="">
-        <!-- {aasa}Adadawd Classe Bootstrap: img-fluid - Faz com que a imagem responda ao tamanho do contêiner pai -->
-        <!-- Classe Bootstrap: w-50 - Define a largura da imagem como 50% do contêiner pai -->
-        <!-- Classe Bootstrap: d-none d-sm-block - Esconde a imagem em telas pequenas e exibe em telas maiores (sm = small) -->
-      
-      </div>
-    </div>
-  </section>
-
-
-  <!-- *News Letter-->
-  <section class="bg-primary text-light p-5">
-    <div class="container">
-      <!-- Classe Bootstrap: bg-primary - Define o fundo primário para a seção -->
-      <!-- Classe Bootstrap: text-light - Define o texto como claro para melhor contraste com o fundo primário -->
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+      <!-- Classe Bootstrap: bg-dark - Define o fundo escuro para a seção -->
+      <!-- Classe Bootstrap: text-light - Define o texto como claro para melhor contraste com o fundo escuro -->
       <!-- Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
+      <!-- Classe Bootstrap: p-lg-0 - Remove o preenchimento (espaçamento interno) em telas grandes -->
+      <!-- Classe Bootstrap: pt-lg-5 - Adiciona preenchimento (espaçamento interno) no topo em telas grandes -->
+      <!-- Classe Bootstrap: text-center - Centraliza o texto horizontalmente -->
+      <!-- Classe Bootstrap: text-sm-start - Alinha o texto à esquerda em telas pequenas -->
 
-      <div class="d-md-flex justify-content-between align-items-center">
-        <!-- Classe Bootstrap: d-md-flex - Torna o contêiner flexível em telas médias e maiores -->
-        <!-- Classe Bootstrap: justify-content-between - Distribui os itens igualmente ao longo do eixo principal com espaço entre eles -->
-        <!-- Classe Bootstrap: align-items-center - Centraliza os itens verticalmente dentro do contêiner flexível -->
+      <div class="container">
+        <!-- Tag Bootstrap: container - Define um contêiner para centralizar o conteúdo e fornecer margens laterais automáticas -->
 
-        <h3 class="mb-3 mb-md-0">Sing Up For Our NewsLatter</h3>
-        <!-- Tag Bootstrap: mb-3 e mb-md-0 - Adiciona margem inferior de 3 unidades em telas pequenas e remove a margem inferior em telas médias e maiores -->
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <!-- Classe Bootstrap: d-sm-flex - Torna o contêiner flexível em telas pequenas e maiores -->
+          <!-- Classe Bootstrap: align-items-center - Centraliza os itens verticalmente dentro do contêiner flexível -->
+          <!-- Classe Bootstrap: justify-content-between - Distribui os itens igualmente ao longo do eixo principal com espaço entre eles -->
 
-        <div class="input-group news-input">
-          <!-- Classe Bootstrap: input-group - Agrupa elementos de entrada de formulário para uma apresentação mais consistente -->
+          <div> 
+            <h1>Se torne um <span class="text-warning">Web Developer</span></h1>
+            <!-- Tag Bootstrap: text-warning - Define a cor do texto como amarelo (warning) -->
+
+            <p class="lead">
+              Nós nos concentramos em ensinar aos nossos alunos os fundamentos das melhores e mais recentes tecnologias para prepará-los para sua primeira função de desenvolvedor
+            </p>
+
+            <button 
+            class="btn btn-primary btn-lg"               
+            data-bs-toggle="modal"
+            data-bs-target="#Form">Iniciar a inscrição</button>
+            <!-- Tag Bootstrap: btn - Define um botão -->
+            <!-- Classe Bootstrap: btn-primary - Define o estilo primário para o botão -->
+            <!-- Classe Bootstrap: btn-lg - Define o tamanho grande para o botão -->
+          </div>
           
-          <input type="text" 
-            class="form-control" 
-            placeholder="Email">
-          <!-- Tag Bootstrap: form-control - Estiliza as entradas de formulário para ter uma aparência consistente -->
-          
-          <button 
-            class="btn btn-dark btn-lg" 
-            type="button" 
-            id="button-addon2">Button</button>
-          <!-- Tag Bootstrap: btn - Define um botão -->
-          <!-- Classe Bootstrap: btn-dark - Define o estilo escuro para o botão -->
-          <!-- Classe Bootstrap: btn-lg - Define o tamanho grande para o botão -->
+          <img 
+          class="img-fluid w-50 d-none d-sm-block" 
+          src="./img/showcase.svg" 
+          alt="">
+          <!-- {aasa}Adadawd Classe Bootstrap: img-fluid - Faz com que a imagem responda ao tamanho do contêiner pai -->
+          <!-- Classe Bootstrap: w-50 - Define a largura da imagem como 50% do contêiner pai -->
+          <!-- Classe Bootstrap: d-none d-sm-block - Esconde a imagem em telas pequenas e exibe em telas maiores (sm = small) -->
+        
+        </div>
+      </div>
+    </section>
+
+
+  <!-- *Noticiário-->
+    <section class="bg-primary text-light p-5">
+      <div class="container">
+        <!-- Classe Bootstrap: bg-primary - Define o fundo primário para a seção -->
+        <!-- Classe Bootstrap: text-light - Define o texto como claro para melhor contraste com o fundo primário -->
+        <!-- Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
+
+        <div class="d-md-flex justify-content-between align-items-center">
+          <!-- Classe Bootstrap: d-md-flex - Torna o contêiner flexível em telas médias e maiores -->
+          <!-- Classe Bootstrap: justify-content-between - Distribui os itens igualmente ao longo do eixo principal com espaço entre eles -->
+          <!-- Classe Bootstrap: align-items-center - Centraliza os itens verticalmente dentro do contêiner flexível -->
+
+          <h3 class="mb-3 mb-md-0">Inscreva-se em nosso noticiário virtual</h3>
+          <!-- Tag Bootstrap: mb-3 e mb-md-0 - Adiciona margem inferior de 3 unidades em telas pequenas e remove a margem inferior em telas médias e maiores -->
+
+          <div class="input-group news-input">
+            <!-- Classe Bootstrap: input-group - Agrupa elementos de entrada de formulário para uma apresentação mais consistente -->
+            
+            <input type="text" 
+              class="form-control" 
+              placeholder="Email">
+            <!-- Tag Bootstrap: form-control - Estiliza as entradas de formulário para ter uma aparência consistente -->
+            
+            <button 
+              class="btn btn-dark btn-lg" 
+              type="button" 
+              id="button-addon2">Entrar</button>
+            <!-- Tag Bootstrap: btn - Define um botão -->
+            <!-- Classe Bootstrap: btn-dark - Define o estilo escuro para o botão -->
+            <!-- Classe Bootstrap: btn-lg - Define o tamanho grande para o botão -->
+          </div>
+
         </div>
 
       </div>
-
-    </div>
-  </section>
+    </section>
 
   <!-- *Caixas-->
-  <section class="p-5">
-    <!-- ^^Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
+    <section class="p-5">
+      <!-- ^^Classe Bootstrap: p-5 - Adiciona preenchimento (espaçamento interno) de 5 unidades a todos os lados -->
 
-    <div class="container">
-      <!-- Tag Bootstrap: container - Define um contêiner para centralizar o conteúdo e fornecer margens laterais automáticas -->
+      <div class="container">
+        <!-- Tag Bootstrap: container - Define um contêiner para centralizar o conteúdo e fornecer margens laterais automáticas -->
 
-      <div class="row text-center">
-        <!-- Classe Bootstrap: row - Cria uma linha para conter as colunas -->
-        <!-- Classe Bootstrap: text-center - Centraliza o texto horizontalmente dentro da linha -->
+        <div class="row text-center">
+          <!-- Classe Bootstrap: row - Cria uma linha para conter as colunas -->
+          <!-- Classe Bootstrap: text-center - Centraliza o texto horizontalmente dentro da linha -->
 
-        <div class="col-md">
-          <div class="card bg-dark text-light">
-            <div class="card-body text-center">
-              <div class="h1 mb-3">
-                <i class="bi bi-laptop"></i>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Virtual</h3>
+                <p class="card-text">
+                  Virtual: cursos online acessíveis em qualquer lugar, a qualquer momento.
+                </p>
+                <a href="#" class="btn btn-primary">Leia Mais</a>
               </div>
-              <h3 class="card-title mb-3">Virtual</h3>
-              <p class="card-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Iure, quas quidem possimus dolorum esse eligendi?
-              </p>
-              <a href="#" class="btn btn-primary">Read More</a>
             </div>
           </div>
-        </div>
 
 
-        <div class="col-md">
-          <div class="card bg-secondary text-light">
-            <div class="card-body text-center">
-              <div class="h1 mb-3">
-                <i class="bi bi-person-square"></i>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-person-square"></i>
+                </div>
+                <h3 class="card-title mb-3">Híbrido</h3>
+                <p class="card-text">
+                  Híbrido: combinação de ensino presencial e online para uma experiência flexível.
+                </p>
+                <a href="#" class="btn btn-dark">Leia Mais</a>
               </div>
-              <h3 class="card-title mb-3">Hybrid</h3>
-              <p class="card-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Iure, quas quidem possimus dolorum esse eligendi?
-              </p>
-              <a href="#" class="btn btn-dark">Read More</a>
             </div>
           </div>
-        </div>
 
 
-        <div class="col-md">
+          <div class="col-md">
             <div class="card bg-dark text-light">
               <div class="card-body text-center">
                 <div class="h1 mb-3">
                   <i class="bi bi-people"></i>
                 </div>
-                <h3 class="card-title mb-3">In Person</h3>
+                <h3 class="card-title mb-3">Presencial</h3>
                 <p class="card-text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Iure, quas quidem possimus dolorum esse eligendi?
+                  Presencial: aulas tradicionais em sala de aula para uma experiência de aprendizado envolvente.
                 </p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary">Leia Mais</a>
               </div>
             </div>
           </div>
         </div>
         <!-- Classe Bootstrap: col - Define uma coluna no sistema de grade Bootstrap -->
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Learn Sections-->
-  <section id="learn" class="p-5">
-    <div class="container bg-custom-purple rounded">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-md">
-          <img src="./img/fundamentals.svg" class="img-fluid" alt="">
-        </div>
-        <div class="col-md p-5">
-          <h2>Learn The Fundamentals</h2>
-          <p class="lead">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Similique deleniti possimus magnam corporis ratione facere!
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-            reiciendis eius autem eveniet mollitia, at asperiores suscipit
-            quae similique laboriosam iste minus placeat odit velit quos,
-            nulla architecto amet voluptates?
-          </p>
-          <a href="#" class="btn btn-light mt-3">
-            <i class="bi bi-chevron-right"></i> Read More
-          </a>
+
+  <!-- *Seções de Aprendizado -->
+    <section id="learn" class="p-5">
+      <div class="container bg-custom-purple rounded">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="./img/fundamentals.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md p-5">
+            <h2>Aprenda os Fundamentos</h2>
+            <p class="lead">
+              Aprenda os conceitos básicos.
+              Compreenda os fundamentos essenciais para construir uma base sólida.
+            </p>
+            <p>
+              Explore conceitos fundamentais em profundidade e ganhe um entendimento sólido dos princípios subjacentes.
+              Desenvolva as habilidades necessárias para enfrentar desafios complexos com confiança.
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Leia Mais
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-    <!-- Learn Sections-->
+  <!-- *Seções de Aprendizado -->
     <section id="learn" class="p-5 bg-dark text-light">
       <div class="container">
         <div class="row align-items-center justify-content-between">
           
           <div class="col-md p-5">
-            <h2>Learn React</h2>
+            <h2>Aprenda React</h2>
             <p class="lead">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Similique deleniti possimus magnam corporis ratione facere!
+              Aprenda React, uma das bibliotecas JavaScript mais populares.
+              Desenvolva aplicações web interativas e dinâmicas.
             </p>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-              reiciendis eius autem eveniet mollitia, at asperiores suscipit
-              quae similique laboriosam iste minus placeat odit velit quos,
-              nulla architecto amet voluptates?
+              Explore os conceitos principais de React e aprenda a construir componentes reutilizáveis.
+              Adquira habilidades avançadas para criar interfaces de usuário modernas e responsivas.
             </p>
             <a href="#" class="btn btn-light mt-3">
-              <i class="bi bi-chevron-right"></i> Read More
+              <i class="bi bi-chevron-right"></i> Leia Mais
             </a>
           </div>
 
@@ -273,10 +272,10 @@
 
 
 
-    <!-- Question Accordion -->
+  <!-- *Question Accordion -->
     <section id="questions" class="p-5">
       <div class="container">
-        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <h2 class="text-center mb-4">Perguntas Frequentes</h2>
 
         <!--Item 1-->
         <div class="accordion-item">
@@ -345,20 +344,245 @@
     </section>
 
 
+  <!--* Instrutores -->
     <section id="instructors" class="p-5 bg-primary">
       <div class="container">
-        <h2 class="text-center text-white"> Our Instructors</h2>
+        <h2 class="text-center text-white"> Os instrutores</h2>
         <p class="lead text-center text-white mb-5">
-          Our instructore.ss
+          Todos os instrutores têm mais de 5 anos de experiência como desenvolvedores web na indústria
         </p>
+        <div class="row g-4 align-items-stretch">
+
+
+          <!--Colum cada coluna um card, como são 6 é dividido em 12-->
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card bg-light">
+
+              <div class="card-body text-center">
+
+                <img src="https://randomuser.me/api/portraits/men/11.jpg" 
+                class="rounded-circle mb-3">
+
+                <h3 class="card-title mb-3">Joe Smith</h3>
+                <p class="card-text">Joe Smith é um empreendedor dedicado e inovador. Desde jovem, ele mostrou um talento natural para encontrar soluções criativas para os desafios do dia a dia. Após fundar sua primeira empresa aos 26 anos, Joe rapidamente se destacou no mundo dos negócios</p>
+                <!--Tags icons-->
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              
+              </div>
+            </div>
+          </div>
+          
+          <!--Coluna 2-->
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card bg-light">
+
+              <div class="card-body text-center">
+
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" 
+                class="rounded-circle mb-3">
+
+                <h3 class="card-title mb-3">Carla Rocha</h3>
+                <p class="card-text ">Carla Rocha é uma inovadora audaz e cativante. Desde cedo, ela mostrou uma aptidão notável para dar vida a sonhos. Iniciou seu primeiro projeto aos 20 anos e desde então tem sido uma força motriz nos setores de várias startups, CEO da Fit-Bank e desenvolvedora web</p>
+                <!--Tags icons-->
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              
+              </div>
+            </div>
+          </div>
+
+
+          <!--Coluna 3-->
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card bg-light">
+
+              <div class="card-body text-center">
+
+                <img src="https://randomuser.me/api/portraits/men/5.jpg" 
+                class="rounded-circle mb-3">
+
+                <h3 class="card-title mb-3">Carlos Santos</h3>
+                <p class="card-text">Carlos Santos é um inovador resiliente e motivador. Após uma longa carreira em outra área, ele descobriu uma paixão pelo empreendedorismo aos 40 anos. Iniciou seu primeiro projeto de negócios aos 45 anos e desde então tem sido uma figura influente no mundo das startups</p>
+                <!--Tags icons-->
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              
+              </div>
+            </div>
+          </div>
+
+          <!--Coluna 4-->
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card bg-light">
+
+              <div class="card-body text-center">
+
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" 
+                class="rounded-circle mb-3">
+
+                <h3 class="card-title mb-3">Lucas Ribeiro</h3>
+                <p class="card-text">Lucas Ribeiro, um prodígio audacioso e um ícone de motivação. Ainda na adolescência, ele descobriu um talento nato. Com apenas 15 anos, lançou seu primeiro projeto de negócios e, desde então, tem sido uma estrela em ascensão no universo das startups</p>
+                <!--Tags icons-->
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
 
-  <!-- *Js Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- *Contact & Map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Informações de Contato</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Localização:</span> Av. Felipe Santiago, 411 - Cidade Universitária, Russas - CE, 62900-000, Brasil
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Telefone:</span> (88) 3411-5000
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Telefone do Aluno:</span> (88) 3411-5001
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">E-mail:</span> matricula@campusrussas.ufc.br
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">E-mail do Aluno:</span> antoniol.carvalho49@edu.ufc.br
+              </li>
+            </ul>
+          </div>
+          <div class="col-md d-flex justify-content-center">
+            <div id="map" ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+  <!--*Footer-->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead"> Copright &copy; 2024 Frontend Bootcamp</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h2"></i>
+        </a>
+      </div>
 
-  <script src="./index.js"></script>
+    </footer>
+
+
+  <!-- * Modal -->
+    <div
+      class="modal fade" 
+      id="Form" 
+      tabindex="-1" 
+      aria-labelledby="FormLabel" 
+      aria-hidden="true" 
+    >
+    <!-- Define um modal que pode desaparecer quando fechado -->
+    <!-- ID único do modal -->
+    <!-- Controla a ordem de tabulação -->
+    <!-- Define o ID do elemento que serve como rótulo para o modal -->
+    <!-- Define se o modal está visível ou oculto para tecnologias de assistência -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="FormLabel">Matrícula</h5> <!-- Título do modal -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal" 
+              aria-label="Fechar" 
+            ></button>
+            <!-- data-bs-dismiss = Botão para fechar o modal-->
+            <!--aria-label = Rótulo do botão de fechar--> 
+          </div>
+          <div class="modal-body">
+            <p class="lead">Preencha este formulário e entraremos em contato com você!</p> <!-- Instrução para o usuário -->
+            <form> <!-- Formulário dentro do modal -->
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">Nome:</label> <!-- Campo para o primeiro nome -->
+                <input type="text" class="form-control" id="first-name" /> <!-- Input para o primeiro nome -->
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Sobrenome:</label> <!-- Campo para o sobrenome -->
+                <input type="text" class="form-control" id="last-name" /> <!-- Input para o sobrenome -->
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">E-mail:</label> <!-- Campo para o e-mail -->
+                <input type="email" class="form-control" id="email" /> <!-- Input para o e-mail -->
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Telefone:</label> <!-- Campo para o telefone -->
+                <input type="tel" class="form-control" id="phone" /> <!-- Input para o telefone -->
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Fechar <!-- Botão para fechar o modal -->
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+              Enviar <!-- Botão para enviar o formulário -->
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+
+
+
+<!-- !Adicione o Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+  <script>
+    // Inicialize o mapa
+    var map = L.map('map').setView([-4.94600, -37.97449], 15); // Coordenadas aproximadas de Russas, CE
+
+    // Adicione a camada do mapa OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Adicione um marcador para o endereço específico
+    L.marker([-4.94600, -37.97449]).addTo(map) // Coordenadas do endereço "R. Felipe Santiago, 411 - Cidade Universitária, Russas - CE, 62900-000, Brasil"
+      .bindPopup('<b>Universidade Federal do Ceará<br> Campus de Russas</b>')
+      .openPopup();
+  </script>
+    
+
+
+
+    <!-- ! Js Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./index.js"></script>
 
 </body>
 </html>

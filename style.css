@@ -21,3 +21,9 @@ body::before {
     background-color: rgba(28, 32, 36, 0.986)!important;/** "!important" - faz ignorar o bootstrap */
     transition: background-color 0.3s ease; /* Adiciona uma transição suave */
 }
+
+#map {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+}
