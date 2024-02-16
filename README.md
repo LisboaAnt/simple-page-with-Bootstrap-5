@@ -16,9 +16,9 @@ O projeto desenvolvido durante o bootcamp é um site responsivo utilizando o fra
 ## Como Executar o Projeto
 
 1. Clone o repositório do projeto:
-   ```
+   ```bash
    git clone https://github.com/LisboaAnt/simple-page-with-Bootstrap-5.git
-   ```
+
 
 2. Abra o arquivo `index.html` em seu navegador web.
 
