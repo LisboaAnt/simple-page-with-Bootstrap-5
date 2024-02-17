@@ -2,6 +2,9 @@
 
 Este arquivo descreve o projeto desenvolvido durante o bootcamp mencionado, utilizando Bootstrap 5 como ferramenta principal. O projeto é baseado no conteúdo disponível no seguinte link: [Bootstrap 5 Crash Course ](https://www.youtube.com/watch?v=4sosXZsdy-s&t=3378s).
 
+## Site Hospedado no Github-pages
+- Disponível no seguinte link: [https://lisboaant.github.io/simple-page-with-Bootstrap-5/](https://lisboaant.github.io/simple-page-with-Bootstrap-5/).
+
 ## Descrição do Projeto
 
 O projeto desenvolvido durante o bootcamp é um site responsivo utilizando o framework Bootstrap 5. O site apresenta várias seções, como página inicial, seção de sobre nós, portfólio, depoimentos e formulário de contato.
