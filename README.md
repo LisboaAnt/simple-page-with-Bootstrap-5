@@ -1,6 +1,6 @@
 # - Bootcamp Projeto
 
-Este arquivo descreve o projeto desenvolvido durante o bootcamp mencionado, utilizando Bootstrap 5 como ferramenta principal. O projeto é baseado no conteúdo disponível no seguinte link: [Bootcamp - Projeto Final](https://www.youtube.com/watch?v=4sosXZsdy-s&t=3378s).
+Este arquivo descreve o projeto desenvolvido durante o bootcamp mencionado, utilizando Bootstrap 5 como ferramenta principal. O projeto é baseado no conteúdo disponível no seguinte link: [Bootstrap 5 Crash Course ](https://www.youtube.com/watch?v=4sosXZsdy-s&t=3378s).
 
 ## Descrição do Projeto
 
